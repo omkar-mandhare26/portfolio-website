@@ -15,7 +15,7 @@ const HomePage = () => {
                 <Projects />
                 <Skills />
                 <Connect />
-                <div className="flex flex-wrap justify-between text-sm py-8 text-zinc-600 dark:text-zinc-300">
+                <div className="flex justify-between text-sm py-8 text-zinc-600 dark:text-zinc-300">
                     <div>Omkar Mandhare</div>
                     <div>Built with Next.js</div>
                 </div>

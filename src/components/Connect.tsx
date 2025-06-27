@@ -13,7 +13,7 @@ import axios, { AxiosError } from "axios";
 const Connect = () => {
     const nameRef = useRef<HTMLInputElement>(null);
     const emailRef = useRef<HTMLInputElement>(null);
-    const messageRef = useRef<HTMLInputElement>(null);
+    const messageRef = useRef<HTMLTextAreaElement>(null);
     const [formAlert, setFormAlert] = useState(false);
     const [alertMessage, setAlertMessage] = useState("");
     const [isFormError, setIsFormError] = useState(false);
@@ -43,7 +43,7 @@ const Connect = () => {
         }
 
         try {
-            const res = await axios.post("/api/v1/contact", {
+            const res = await axios.post("/api/v1/connect", {
                 name,
                 email,
                 message,
@@ -63,7 +63,7 @@ const Connect = () => {
 
     return (
         <div className="my-4">
-            <div className="flex justify-center gap-2 h-auto">
+            <div className="flex flex-wrap justify-center gap-2 h-auto">
                 <div className="flex-1 bg-white dark:bg-zinc-800 rounded">
                     <div className="w-9/10 mx-auto pb-4">
                         <div className="text-2xl font-bold my-4">
@@ -121,6 +121,7 @@ const Connect = () => {
                                     <Textarea
                                         placeholder="Type your message here."
                                         id="message"
+                                        ref={messageRef}
                                     />
                                 </div>
 
@@ -137,7 +138,9 @@ const Connect = () => {
                                 >
                                     <Terminal />
                                     <AlertTitle>
-                                        Error Submitting form
+                                        {isFormError
+                                            ? "Error Submitting form"
+                                            : "Success"}
                                     </AlertTitle>
                                     <AlertDescription>
                                         {alertMessage}
