@@ -2,13 +2,13 @@
 import { Alert, AlertDescription, AlertTitle } from "./ui/alert";
 import { useEffect, useRef, useState } from "react";
 import { FiMessageSquare } from "react-icons/fi";
+import axios, { AxiosError } from "axios";
+import socials from "@/data/socialsData";
 import { Textarea } from "./ui/textarea";
 import { Terminal } from "lucide-react";
-import socials from "@/data/socialsData";
 import { Button } from "./ui/button";
 import { Label } from "./ui/label";
 import { Input } from "./ui/input";
-import axios, { AxiosError } from "axios";
 
 const Connect = () => {
     const nameRef = useRef<HTMLInputElement>(null);
@@ -63,13 +63,13 @@ const Connect = () => {
 
     return (
         <div className="my-4">
-            <div className="flex flex-wrap justify-center gap-2 h-auto">
+            <div className="flex flex-col lg:flex-row justify-center gap-2 h-auto">
                 <div className="flex-1 bg-white dark:bg-zinc-800 rounded">
                     <div className="w-9/10 mx-auto pb-4">
                         <div className="text-2xl font-bold my-4">
                             Connect with me
                         </div>
-                        <div className="flex flex-col gap-2 w-full max-w-xs">
+                        <div className="flex flex-col gap-2 w-full">
                             {socials.map((social, idx) => (
                                 <a
                                     href={social.href}
@@ -82,7 +82,7 @@ const Connect = () => {
                                     </div>
                                     <div>
                                         <div>{social.label}</div>
-                                        <div className="text-sm text-zinc-600 dark:text-zinc-300">
+                                        <div className="text-xs lg:text-sm text-zinc-600 dark:text-zinc-300">
                                             {social.username}
                                         </div>
                                     </div>
@@ -98,7 +98,7 @@ const Connect = () => {
                         </div>
                         <div>
                             <form onSubmit={handleSubmit} noValidate>
-                                <div className="grid w-full max-w-sm items-center gap-3">
+                                <div className="grid w-full items-center gap-3">
                                     <Label htmlFor="name">Name</Label>
                                     <Input
                                         type="text"
@@ -107,7 +107,7 @@ const Connect = () => {
                                         ref={nameRef}
                                     />
                                 </div>
-                                <div className="grid w-full max-w-sm items-center gap-3 mt-4">
+                                <div className="grid w-full items-center gap-3 mt-4">
                                     <Label htmlFor="email">Email</Label>
                                     <Input
                                         type="email"

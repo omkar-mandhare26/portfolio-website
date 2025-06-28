@@ -18,7 +18,7 @@ const socials = [
         label: "LinkedIn",
         icon: <FaLinkedin />,
         href: "https://www.linkedin.com/in/omkar-mandhare26/",
-        username: "linkedin.com/in/omkar-mandhare26",
+        username: "omkar-mandhare26",
     },
     {
         label: "Email",

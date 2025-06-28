@@ -2,6 +2,7 @@ import projects from "@/data/projects";
 import React from "react";
 import { Button } from "./ui/button";
 import { ExternalLink } from "lucide-react";
+import { BsGithub } from "react-icons/bs";
 
 const Projects = () => (
     <div className="my-4">
@@ -10,7 +11,7 @@ const Projects = () => (
             {projects.map((proj, idx) => (
                 <div key={idx}>
                     <div className="py-4">
-                        <div className="flex justify-between flex-wrap">
+                        <div className="flex justify-between items-center">
                             <div className="text-lg font-semibold items-center">
                                 {proj.title}
                             </div>
@@ -18,17 +19,17 @@ const Projects = () => (
                                 {proj.githubLinks.map((link, idx) => (
                                     <div key={idx}>
                                         <a href={link} target="_blank">
-                                            <Button
-                                                variant={"ghost"}
-                                                className="hover:underline"
-                                            >
-                                                Github
+                                            <Button variant={"ghost"}>
+                                                <BsGithub className="block lg:hidden" />
+                                                <span className="hidden lg:block">
+                                                    Github
+                                                </span>
                                                 {proj.githubLinks.length > 1
                                                     ? idx === 0
                                                         ? "(Frontend)"
                                                         : "(Backend)"
                                                     : ""}
-                                                <ExternalLink />
+                                                <ExternalLink className="hidden lg:block" />
                                             </Button>
                                         </a>
                                     </div>

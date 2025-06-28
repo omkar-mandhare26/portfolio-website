@@ -13,7 +13,7 @@ const Introduction = () => {
                 </div>
             </div>
             <hr className="mt-4" />
-            <div className="my-4 text-slate-900 dark:text-slate-100">
+            <div className="text-sm lg:text-md my-4 text-slate-900 dark:text-slate-100">
                 Full-stack dev focused on building intuitive products. <br />
                 Dreaming big, learning fast, and shipping often.
             </div>

@@ -8,7 +8,7 @@ import Introduction from "@/components/Introduction";
 const HomePage = () => {
     return (
         <div className="min-h-screen w-full transition-colors duration-300 bg-zinc-50 text-zinc-900 dark:bg-zinc-900 dark:text-zinc-100">
-            <div className="w-1/2 m-auto min-h-screen">
+            <div className="w-3/4 lg:w-1/2 m-auto min-h-screen">
                 <Introduction />
                 <Socials />
                 <About />
