@@ -1,9 +1,6 @@
-import Projects from "@/components/Projects";
-import Socials from "@/components/Socials";
-import Connect from "@/components/Connect";
-import Skills from "@/components/Skills";
-import About from "@/components/About";
+import StaggerCompPage from "@/components/StaggerCompPage";
 import Introduction from "@/components/Introduction";
+import Socials from "@/components/Socials";
 
 const HomePage = () => {
     return (
@@ -11,14 +8,7 @@ const HomePage = () => {
             <div className="w-3/4 lg:w-1/2 m-auto min-h-screen">
                 <Introduction />
                 <Socials />
-                <About />
-                <Projects />
-                <Skills />
-                <Connect />
-                <div className="flex justify-between text-sm py-8 text-zinc-600 dark:text-zinc-300">
-                    <div>Omkar Mandhare</div>
-                    <div>Built with Next.js</div>
-                </div>
+                <StaggerCompPage />
             </div>
         </div>
     );

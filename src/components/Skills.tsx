@@ -4,8 +4,8 @@ import { Button } from "./ui/button";
 
 const Skills = () => {
     return (
-        <div className="my-4">
-            <div className="text-2xl font-bold">Skills</div>
+        <div className="-mt-8">
+            <div className="text-2xl font-bold mb-2">Skills</div>
             <div className="flex flex-wrap gap-2 justify-center mt-2">
                 {skills.map((val, idx) => (
                     <div key={idx}>

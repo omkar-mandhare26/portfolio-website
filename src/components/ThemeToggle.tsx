@@ -7,13 +7,12 @@ import React from "react";
 
 const ThemeToggle = () => {
     const { theme, setTheme } = useTheme();
-
     return (
         <>
             <Button
                 variant={"ghost"}
                 size={"icon"}
-                className="rounded-full"
+                className="rounded-full transition-all duration-300 hover:shadow-[0_2px_20px_rgba(0,0,0,0.25)] dark:hover:shadow-[0_2px_20px_rgba(255,255,255,0.25)] hover:scale-105 hover:rotate-12"
                 onClick={() => {
                     setTheme(theme === "light" ? "dark" : "light");
                 }}

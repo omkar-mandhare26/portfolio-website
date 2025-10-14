@@ -1,6 +1,8 @@
-import React from "react";
-import { Button } from "./ui/button";
+"use client";
+
 import socials from "@/data/socialsData";
+import { motion } from "motion/react";
+import { Button } from "./ui/button";
 import {
     Tooltip,
     TooltipContent,
@@ -9,7 +11,18 @@ import {
 
 const Socials = () => {
     return (
-        <div className="flex flex-wrap gap-2 my-4">
+        <motion.div
+            initial={{
+                opacity: 0,
+                filter: "blur(10px)",
+            }}
+            animate={{
+                opacity: 1,
+                filter: "blur(0px)",
+            }}
+            transition={{ duration: 0.4, ease: "easeInOut" }}
+            className="flex flex-wrap gap-2 my-4"
+        >
             <div>
                 <a
                     href="/Omkar_Mandhare_Resume.pdf"
@@ -41,7 +54,7 @@ const Socials = () => {
                     </Tooltip>
                 ))}
             </div>
-        </div>
+        </motion.div>
     );
 };
 

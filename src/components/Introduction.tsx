@@ -1,22 +1,56 @@
-import React from "react";
+"use client";
+
 import ThemeToggle from "./ThemeToggle";
+import { motion } from "motion/react";
+import AnimateText from "./AnimateText";
 
 const Introduction = () => {
     return (
         <>
             <div className="flex pt-20 justify-between">
-                <div className="text-2xl font-extrabold">
-                    Hey, {"I'm"} Omkar 👋
-                </div>
+                <AnimateText
+                    text="Hey, I'm Omkar Mandhare👋"
+                    classNames="text-2xl font-extrabold"
+                />
                 <div className="flex">
-                    <ThemeToggle />
+                    <motion.span
+                        initial={{
+                            opacity: 0,
+                            y: -10,
+                        }}
+                        animate={{
+                            opacity: 1,
+                            y: 0,
+                        }}
+                        transition={{
+                            delay: 0.2,
+                            type: "spring",
+                            stiffness: 200,
+                            mass: 2,
+                        }}
+                    >
+                        <ThemeToggle />
+                    </motion.span>
                 </div>
             </div>
-            <hr className="mt-4" />
-            <div className="text-sm lg:text-md my-4 text-slate-900 dark:text-slate-100">
-                Full-stack dev focused on building intuitive products. <br />
-                Dreaming big, learning fast, and shipping often.
-            </div>
+            <motion.div
+                initial={{ opacity: 0, filter: "blur(10px)" }}
+                animate={{
+                    opacity: 1,
+                    filter: "blur(0px)",
+                }}
+                transition={{
+                    duration: 0.4,
+                    ease: "easeInOut",
+                }}
+                className="my-2 border-[0.5px] border-zinc-600 dark:border-zinc-300"
+            />
+            <AnimateText
+                text={
+                    "Full-stack dev focused on building intuitive products. Dreaming big, learning fast, and shipping often."
+                }
+                classNames="text-sm lg:text-md"
+            />
         </>
     );
 };

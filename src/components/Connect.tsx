@@ -1,4 +1,5 @@
 "use client";
+
 import { Alert, AlertDescription, AlertTitle } from "./ui/alert";
 import { useEffect, useRef, useState } from "react";
 import { FiMessageSquare } from "react-icons/fi";
@@ -65,11 +66,11 @@ const Connect = () => {
         <div className="my-4">
             <div className="flex flex-col lg:flex-row justify-center gap-2 h-auto">
                 <div className="flex-1 bg-white dark:bg-zinc-800 rounded">
-                    <div className="w-9/10 mx-auto pb-4">
+                    <div className="w-9/10 mx-auto pb-4 h-full flex flex-col">
                         <div className="text-2xl font-bold my-4">
                             Connect with me
                         </div>
-                        <div className="flex flex-col gap-2 w-full">
+                        <div className="flex flex-col gap-4 w-full">
                             {socials.map((social, idx) => (
                                 <a
                                     href={social.href}

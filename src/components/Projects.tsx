@@ -6,11 +6,11 @@ import { BsGithub } from "react-icons/bs";
 
 const Projects = () => (
     <div className="my-4">
-        <div className="text-2xl font-bold">Projects</div>
+        <div className="text-2xl font-bold mb-2">Projects</div>
         <div>
             {projects.map((proj, idx) => (
                 <div key={idx}>
-                    <div className="py-4">
+                    <div className="pb-8">
                         <div className="flex justify-between items-center">
                             <div className="text-lg font-semibold items-center">
                                 {proj.title}
