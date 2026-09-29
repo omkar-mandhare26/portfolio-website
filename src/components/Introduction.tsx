@@ -47,7 +47,7 @@ const Introduction = () => {
             />
             <AnimateText
                 text={
-                    "Full-stack dev focused on building intuitive products. Dreaming big, learning fast, and shipping often."
+                    "AI/ML developer focused on building practical AI-powered solutions. Dreaming big, learning fast, and shipping often."
                 }
                 classNames="text-sm lg:text-md"
             />

@@ -5,16 +5,14 @@ const About = () => {
         <div className="my-4">
             <div className="text-2xl font-bold">About</div>
             <div className="text-zinc-600 dark:text-zinc-300 text-justify pt-2">
-                {"I'm"} a full-stack developer from India with a passion for
-                building fast, modern, and scalable web applications. My core
+                {"I'm"} an AI/ML developer from India with a passion for
+                building intelligent, practical, and data-driven applications. My core
                 tech stack includes{" "}
                 <span className="font-semibold">
                     {" "}
-                    Next.js, Node.js, MongoDB, and Tailwind CSS
+                    Python, Machine Learning, Generative AI, LLMs, and Scikit-learn
                 </span>
-                . I enjoy turning ideas into real-world products with clean
-                design and solid architecture. I love challenges, big goals, and
-                constant growth.
+                . I enjoy turning data and AI concepts into real-world solutions with clean implementation and reliable architecture. I love challenges, big goals, and constantly learning new technologies.
                 <br />
                 Open to freelance and full-time opportunities — {"let's"}{" "}
                 connect!
