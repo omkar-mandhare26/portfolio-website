@@ -3,6 +3,3 @@ const skills = [
 ];
 
 export default skills;
-
-// Machine Learning | Deep Learning | Generative AI | Agentic AI | LLM | NLP | RAG | Python | SQL |
-// Pandas | NumPy | Scikit-learn | FAISS | TensorFlow | MongoDB | MySQL | Streamlit
